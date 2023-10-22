@@ -1,15 +1,3 @@
-/*
- * Copyright (c) 2018-2019 The Linux Foundation. All rights reserved.
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2 and
- * only version 2 as published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- */
 &cci {
 	#address-cells = <1>;
 	#size-cells = <0>;
@@ -56,8 +44,8 @@
 			"CAMIF_MCLK0",
 			"CAM_RESET0";
 		status = "ok";
-		clocks = <&clock_gcc clk_mclk0_clk_src>,
-			<&clock_gcc clk_gcc_camss_mclk0_clk>;
+		clocks = <&gcc MCLK0_CLK_SRC>,
+			<&gcc GCC_CAMSS_MCLK0_CLK>;
 		clock-names = "cam_src_clk", "cam_clk";
 		qcom,clock-rates = <19200000 0>;
 	};
@@ -94,8 +82,8 @@
 			"CAM_STANDBY2";
 		qcom,cci-master = <0>;
 		status = "ok";
-		clocks = <&clock_gcc clk_mclk2_clk_src>,
-			<&clock_gcc clk_gcc_camss_mclk2_clk>;
+		clocks = <&gcc MCLK2_CLK_SRC>,
+			<&gcc GCC_CAMSS_MCLK2_CLK>;
 		clock-names = "cam_src_clk", "cam_clk";
 		qcom,clock-rates = <19200000 0>;
 	};
@@ -153,8 +141,8 @@
 		qcom,sensor-position = <0>;
 		qcom,sensor-mode = <0>;
 		qcom,cci-master = <0>;
-		clocks = <&clock_gcc clk_mclk0_clk_src>,
-			<&clock_gcc clk_gcc_camss_mclk0_clk>;
+		clocks = <&gcc MCLK0_CLK_SRC>,
+			<&gcc GCC_CAMSS_MCLK0_CLK>;
 		clock-names = "cam_src_clk", "cam_clk";
 		qcom,clock-rates = <24000000 0>;
 	};
@@ -195,8 +183,8 @@
 		qcom,sensor-position = <1>;
 		qcom,sensor-mode = <0>;
 		qcom,cci-master = <0>;
-		clocks = <&clock_gcc clk_mclk2_clk_src>,
-			<&clock_gcc clk_gcc_camss_mclk2_clk>;
+		clocks = <&gcc MCLK2_CLK_SRC>,
+			<&gcc GCC_CAMSS_MCLK2_CLK>;
 		clock-names = "cam_src_clk", "cam_clk";
 		qcom,clock-rates = <24000000 0>;
 	};
