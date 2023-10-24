@@ -499,6 +499,8 @@ dtb-$(CONFIG_ARCH_MSM8917) += msm8917-pmi8950-mtp.dtb \
 	msm8917-pmi8940-rcm.dtb
 endif
 
+dtb-$(CONFIG_ARCH_MSM8917) += tb8x04f-msm8917-pmi8937-qrd-sku5.dtb
+
 always		:= $(dtb-y)
 subdir-y	:= $(dts-dirs)
 clean-files    := *.dtb *.dtbo
