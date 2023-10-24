@@ -467,6 +467,38 @@ dtb-$(CONFIG_ARCH_SDM429) += sdm429-mtp.dtb \
 	sda429-cdp.dtb
 endif
 
+ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
+
+dtbo-$(CONFIG_ARCH_MSM8917) += msm8917-mtp-overlay.dtbo \
+	msm8917-qrd-overlay.dtbo \
+	msm8917-cdp-overlay.dtbo \
+	msm8917-cdp-ext-codec-overlay.dtbo \
+	msm8917-cdp-ml-touch-overlay.dtbo \
+	msm8917-rcm-overlay.dtbo \
+	apq8017-mtp-overlay.dtbo \
+	apq8017-cdp-overlay.dtbo \
+	apq8017-cdp-wcd-rome-overlay.dtbo
+else
+dtb-$(CONFIG_ARCH_MSM8917) += msm8917-pmi8950-mtp.dtb \
+	msm8917-pmi8950-cdp.dtb \
+	msm8917-pmi8950-rcm.dtb \
+	msm8917-pmi8950-ext-codec-cdp.dtb \
+	msm8917-pmi8950-cdp-mirror-lake-touch.dtb \
+	apq8017-pmi8950-cdp-wcd-rome.dtb \
+	apq8017-pmi8950-mtp.dtb \
+	apq8017-pmi8950-cdp.dtb \
+	msm8917-pmi8937-qrd-sku5.dtb \
+	msm8917-pmi8937-mtp.dtb \
+	msm8917-pmi8937-cdp.dtb \
+	msm8917-pmi8937-rcm.dtb \
+	apq8017-pmi8937-mtp.dtb \
+	apq8017-pmi8937-cdp.dtb \
+	apq8017-pmi8937-cdp-wcd-rome.dtb \
+	msm8917-pmi8940-mtp.dtb \
+	msm8917-pmi8940-cdp.dtb \
+	msm8917-pmi8940-rcm.dtb
+endif
+
 always		:= $(dtb-y)
 subdir-y	:= $(dts-dirs)
 clean-files    := *.dtb *.dtbo
