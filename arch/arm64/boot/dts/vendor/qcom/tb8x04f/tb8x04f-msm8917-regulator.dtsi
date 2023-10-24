@@ -1,4 +1,4 @@
-&pm8917_l10 {
+&pm8937_l10 {
 		regulator-always-on;
 };
 
